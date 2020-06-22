@@ -21,7 +21,7 @@ import { CreateSessionComponent } from './events/event-details/create-session.co
 import { SessionListComponent } from './events/event-details/session-list.component';
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
 import { SimpleModalComponent } from './common/simple-modal.component';
-// import { JQ_TOKEN } from './common/jQuery.service';
+import { JQ_TOKEN } from './common/jQuery.service';
 import { ModalTriggerDirective } from './common/modal-trigger.component';
 import { UpvoteComponent } from './events/event-details/upvote.component';
 import { VoterService } from './events/event-details/voter.service';
@@ -29,7 +29,7 @@ import { EventResolver } from './events/event.resolver.service';
 
 
 const toastr: Toastr = window['toastr'];
-// const jQuery = window['$'];
+const jQuery = window['$'];
 
 @NgModule({
   declarations: [
@@ -57,7 +57,7 @@ const toastr: Toastr = window['toastr'];
   providers: [
     EventService,
     { provide: TOASTR_TOKEN, useValue: toastr},
-    // { provide: JQ_TOKEN, useValue: jQuery },
+    { provide: JQ_TOKEN, useValue: jQuery },
     EventRouteActivator,
     EventListResolver,
     EventResolver,

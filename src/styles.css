@@ -1,3 +1,38 @@
 /* Add application styles & imports to this file! */
 @import '~ngf-bootstrap/dist/bootstrap.min.css';
-@import '~toastr/build/toastr.min.css'
+@import '~toastr/build/toastr.min.css';
+
+.margin-btn-canel{
+  margin: 1rem;
+}
+
+em{
+    float:right;
+    color: #E05C65;
+    padding-left: 10px;
+}
+
+
+
+.error input,.error select, .error textarea{
+    background-color: #E3C3E5;
+}
+
+
+.error ::-webkit-input-placeholder{
+    color: #999;
+}
+
+
+.error ::-moz-placeholder{
+    color: #999;
+}
+
+.error :-moz-placeholder{
+    color: #999;
+}
+
+
+.error :ms-input-placeholder{
+    color: #999;
+}
