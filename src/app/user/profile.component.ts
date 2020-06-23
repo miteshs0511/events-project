@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
   profileForm: FormGroup;
 
   constructor(
-    private authService: AuthService,
+    public authService: AuthService,
     private router: Router,
     @Inject(TOASTR_TOKEN) private toastr: Toastr) {
 

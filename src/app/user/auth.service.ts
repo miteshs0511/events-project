@@ -2,9 +2,15 @@ import { Injectable } from '@angular/core';
 import { IUser } from './user.model';
 
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
+
 export class AuthService {
-    currentUser: IUser;
+    currentUser;
+
+    constructor(){
+    }
 
     loginUser(userName: string, password: string) {
         this.currentUser = {
@@ -13,6 +19,10 @@ export class AuthService {
             firstName: 'John',
             lastName: 'Papa'
         };
+    }
+
+    getCurrentUser(){
+      return this.currentUser;
     }
 
     isAuthenticated() {

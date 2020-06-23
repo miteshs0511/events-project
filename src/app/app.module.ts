@@ -29,7 +29,7 @@ import { EventResolver } from './events/event.resolver.service';
 
 
 const toastr: Toastr = window['toastr'];
-const jQuery = window['$'];
+const jQuery = window['jQuery'];
 
 @NgModule({
   declarations: [

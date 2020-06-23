@@ -6,7 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile.component';
 import { userRoutes } from './user.route';
 import { LoginComponent } from './login.component';
-import { AuthService } from './auth.service';
 
 
 @NgModule({
@@ -21,7 +20,7 @@ import { AuthService } from './auth.service';
     RouterModule.forChild(userRoutes)
   ],
   providers: [
-    AuthService
+   
   ],
   bootstrap: []
 })

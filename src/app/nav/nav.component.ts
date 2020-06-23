@@ -10,9 +10,22 @@ import { EventService } from '../events/shared/events.service';
 export class NavBarComponent {
   searchTerm = '';
   foundSessions: ISession[];
- constructor(public authService: AuthService,
+  firstName: string;
+  
+ constructor(private authService: AuthService,
   private eventService: EventService) {
 
+ }
+
+ isAuthenticated(){
+   let user = this.authService.getCurrentUser();
+   if(user){
+     this.firstName = user.firstName;
+     return true;
+   }
+   else{
+     return false;
+   }
  }
 
  searchSessions(searchTerm) {
