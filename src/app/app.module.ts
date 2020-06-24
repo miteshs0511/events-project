@@ -73,7 +73,7 @@ const jQuery = window['jQuery'];
 export class AppModule { }
 
 export function checkDirtyState(component: CreateEventComponent) {
-  if (component.isDirty) {
+  if (component.createEventForm.dirty) {
     return window.confirm('You have not saved this event, do you really want to cancel?');
   }
   return true;
