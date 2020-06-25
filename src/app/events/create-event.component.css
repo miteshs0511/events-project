@@ -1,1 +1,11 @@
 
+.f-label ::before {
+    content: ":";
+    float: right;
+}
+
+.f-label .f-required::after {
+  content: "*";
+  color: red;
+  font-size: 14px;
+}
