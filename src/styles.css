@@ -1,7 +1,4 @@
 /* Add application styles & imports to this file! */
-@import '~ngf-bootstrap/dist/bootstrap.min.css';
-@import '~toastr/build/toastr.min.css';
-@import url('https://unpkg.com/ngx-bootstrap@5.6.1/datepicker/bs-datepicker.css');
 
 .margin-btn-canel{
   margin: 1rem;
