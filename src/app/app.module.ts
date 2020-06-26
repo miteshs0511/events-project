@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { EventsListComponent } from './events/events-list.component';
@@ -16,7 +17,6 @@ import { Error404Component } from './common/errors/404error.component';
 import { EventRouteActivator } from './events/event-details/event-route-activator.service';
 import { EventListResolver } from './events/events-list-resolver.service';
 import { AuthService } from './user/auth.service';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateSessionComponent } from './events/event-details/create-session.component';
 import { SessionListComponent } from './events/event-details/session-list.component';
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
@@ -28,6 +28,7 @@ import { VoterService } from './events/event-details/voter.service';
 import { EventResolver } from './events/event.resolver.service';
 import { JQUERY_SERVICE } from './new-jquery.service';
 import { DatepickerModule, BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { PopoverModule } from 'ngx-bootstrap/popover';
 
 const toastr: Toastr = window['toastr'];
 const jQuery = window['jQuery'];
@@ -55,6 +56,7 @@ const jQuery = window['jQuery'];
     RouterModule.forRoot(appRoutes),
     BsDatepickerModule.forRoot(),
     DatepickerModule.forRoot(),
+    PopoverModule.forRoot(),
     HttpClientModule
   ],
   providers: [
