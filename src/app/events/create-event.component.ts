@@ -1,4 +1,4 @@
-import { Component, Inject, ViewChild } from "@angular/core";
+import { Component, Inject, ViewChild, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { EventService } from "./shared/events.service";
 import { TOASTR_TOKEN, Toastr } from '../common/toastr.service';
@@ -8,14 +8,19 @@ import { JQ_TOKEN } from '../common/jQuery.service';
   templateUrl: "./create-event.component.html",
   styleUrls: ["./create-event.component.css"]
 })
-export class CreateEventComponent {
+export class CreateEventComponent implements OnInit {
   newEvent;
 
   @ViewChild('newEventForm') createEventForm: any;
 
   constructor(private router: Router, private eventService: EventService,  
   @Inject(TOASTR_TOKEN) private toastr: Toastr,
-  @Inject(JQ_TOKEN) private $: any) {}
+  @Inject(JQ_TOKEN) private $: any) {
+    
+  }
+
+  ngOnInit(){
+  }
   cancel() {
     this.router.navigate(["/events"]);
   }
@@ -28,6 +33,20 @@ export class CreateEventComponent {
   }
 
   eventDateClick(){
-    this.$('#eventDate').datetipicker({});
+   this.dateTimePickerCall();
+  }
+
+  dateTimePickerCall(){
+     this.$('#eventDate').datetimepicker({
+                 format: 'L'
+                icons: {
+                    time: "fa fa-clock-o",
+                    date: "fa fa-calendar",
+                    up: "fa fa-arrow-up",
+                    down: "fa fa-arrow-down",
+                    next:"fa fa-arrow-right",
+                    previous:"fa fa-arrow-left"
+                }
+            });
   }
 }
