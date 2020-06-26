@@ -27,7 +27,6 @@ import { ModalTriggerDirective } from './common/modal-trigger.component';
 import { UpvoteComponent } from './events/event-details/upvote.component';
 import { VoterService } from './events/event-details/voter.service';
 import { EventResolver } from './events/event.resolver.service';
-import { JQUERY_SERVICE } from './new-jquery.service';
 
 const toastr: Toastr = window['toastr'];
 const jQuery = window['jQuery'];
@@ -60,7 +59,6 @@ const jQuery = window['jQuery'];
     EventService,
     { provide: TOASTR_TOKEN, useValue: toastr},
     { provide: JQ_TOKEN, useValue: jQuery },
-    JQUERY_SERVICE,
     EventRouteActivator,
     EventListResolver,
     EventResolver,

@@ -25,7 +25,6 @@
             "styles": [
               "node_modules/toastr/build/toastr.min.css",
               "node_modules/ngf-bootstrap/dist/bootstrap.min.css",
-              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -77,7 +76,6 @@
             "styles": [
               "node_modules/toastr/build/toastr.min.css",
               "node_modules/ngf-bootstrap/dist/bootstrap.min.css",
-              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "styles.css"
             ],
             "scripts": [],

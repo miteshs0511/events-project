@@ -2,6 +2,7 @@ import { Component, Inject, ViewChild } from "@angular/core";
 import { Router } from "@angular/router";
 import { EventService } from "./shared/events.service";
 import { TOASTR_TOKEN, Toastr } from '../common/toastr.service';
+import { JQ_TOKEN } from '../common/jQuery.service';
 
 @Component({
   templateUrl: "./create-event.component.html",
@@ -12,7 +13,9 @@ export class CreateEventComponent {
 
   @ViewChild('newEventForm') createEventForm: any;
 
-  constructor(private router: Router, private eventService: EventService,  @Inject(TOASTR_TOKEN) private toastr: Toastr) {}
+  constructor(private router: Router, private eventService: EventService,  
+  @Inject(TOASTR_TOKEN) private toastr: Toastr,
+  @Inject(JQ_TOKEN) private $: any) {}
   cancel() {
     this.router.navigate(["/events"]);
   }
@@ -22,5 +25,9 @@ export class CreateEventComponent {
     this.toastr.success('New event created successfully.');
     this.createEventForm.form.markAsPristine();
     this.router.navigate(["/events"]);
+  }
+
+  eventDateClick(){
+    this.$('#eventDate').datetipicker({});
   }
 }
