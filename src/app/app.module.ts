@@ -28,7 +28,6 @@ import { UpvoteComponent } from './events/event-details/upvote.component';
 import { VoterService } from './events/event-details/voter.service';
 import { EventResolver } from './events/event.resolver.service';
 import { JQUERY_SERVICE } from './new-jquery.service';
-import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 const toastr: Toastr = window['toastr'];
 const jQuery = window['jQuery'];
@@ -54,7 +53,6 @@ const jQuery = window['jQuery'];
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    BsDatepickerModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     HttpClientModule
   ],

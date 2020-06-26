@@ -12,15 +12,15 @@ export class ModalTriggerDirective implements OnInit {
     public $: any;
 
     constructor(
-       // @Inject(JQ_TOKEN) private $: any,
-        @Inject(JQUERY_TOKEN) private $factory: any,
+        @Inject(JQ_TOKEN) private $: any,
+        // @Inject(JQUERY_TOKEN) private $factory: any,
         elementRef: ElementRef
     ) {
         this.elementHtml = elementRef.nativeElement;
     }
 
     ngOnInit() {
-        this.$ = this.$factory();
+        // this.$ = this.$factory();
         this.elementHtml.addEventListener('click', event => {
             this.$(`#${this.modalId}`).modal({});
         });
