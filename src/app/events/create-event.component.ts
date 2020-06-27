@@ -20,6 +20,8 @@ export class CreateEventComponent implements OnInit {
   }
 
   ngOnInit(){
+    this.dateTimePickerCall('eventDate','L');
+    this.dateTimePickerCall('eventTime','LT');
   }
   cancel() {
     this.router.navigate(["/events"]);
@@ -32,13 +34,9 @@ export class CreateEventComponent implements OnInit {
     this.router.navigate(["/events"]);
   }
 
-  eventDateClick(){
-   this.dateTimePickerCall();
-  }
-
-  dateTimePickerCall(){
-     this.$('#eventDate').datetimepicker({
-                 format: 'L'
+  dateTimePickerCall(id,format){
+     this.$('#'+ id).datetimepicker({
+                 format: format,
                 icons: {
                     time: "fa fa-clock-o",
                     date: "fa fa-calendar",

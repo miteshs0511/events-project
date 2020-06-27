@@ -2,6 +2,7 @@
 .f-label ::before {
     content: ":";
     float: right;
+
 }
 
 .f-label .f-required::after {
