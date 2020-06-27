@@ -4,6 +4,10 @@
   margin: 1rem;
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
+
 em{
     float:right;
     color: #E05C65;
