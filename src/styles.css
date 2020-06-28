@@ -7,6 +7,7 @@
 .f-label ::before {
     content: ":";
     float: right;
+    line-height: 1.8;
 }
 
 .f-label .f-required::after {

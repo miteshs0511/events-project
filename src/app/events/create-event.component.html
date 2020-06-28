@@ -13,7 +13,7 @@
 		<div class="col-sm-6">
 			<div class="form-group f-label"
 				[ngClass]="{'error': newEventForm.controls.date?.invalid && newEventForm.controls.date?.touched}">
-				<label class="f-required" for="eventDate">Event Date:</label>
+				<label class="f-required" for="eventDate">Event Date</label>
 				<em *ngIf="newEventForm.controls.date?.invalid && (newEventForm.controls.date?.touched)">Required</em>
 				<input (ngModel)="newEvent.date" name="date" required id="eventDate" type="text" class="form-control" placeholder="format (mm/dd/yyyy)..." />
     </div>
@@ -21,7 +21,7 @@
 			<div class="col-sm-6">
 				<div class="form-group f-label"
 					[ngClass]="{'error': newEventForm.controls.time?.invalid && newEventForm.controls.time?.touched}">
-					<label class="f-required" for="eventTime">Event Time:</label>
+					<label class="f-required" for="eventTime">Event Time</label>
 					<em *ngIf="newEventForm.controls.time?.invalid && (newEventForm.controls.time?.touched)">Required</em>
 					<input (ngModel)="newEvent.time" name="time" required id="eventTime" type="text" class="form-control" placeholder="format(9:12 AM)" />
     </div>
