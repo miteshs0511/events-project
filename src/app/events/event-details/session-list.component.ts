@@ -6,7 +6,8 @@ import { VoterService } from './voter.service';
 
 @Component({
     selector: 'session-list',
-    templateUrl: './session-list.component.html'
+    templateUrl: './session-list.component.html',
+    styleUrls: ['./session-list.component.css']
 })
 export class SessionListComponent implements OnChanges {
     @Input() sessions: ISession[];

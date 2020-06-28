@@ -11,17 +11,17 @@
     </div>
 		</div>
 		<div class="col-sm-6">
-			<div class="form-group f-label"
+			<div class="form-group"
 				[ngClass]="{'error': newEventForm.controls.date?.invalid && newEventForm.controls.date?.touched}">
-				<label class="f-required" for="eventDate">Event Date</label>
+				<span class="f-label"><label class="f-label f-required" for="eventDate">Event Date</label></span>
 				<em *ngIf="newEventForm.controls.date?.invalid && (newEventForm.controls.date?.touched)">Required</em>
-				<input (ngModel)="newEvent.date" name="date" required id="eventDate" type="text" class="form-control" placeholder="format (mm/dd/yyyy)..." />
+				<input [(ngModel)]="eventDateModel" name="date" required id="eventDate" type="text" class="form-control" placeholder="format (mm/dd/yyyy)..." />
     </div>
 			</div>
 			<div class="col-sm-6">
-				<div class="form-group f-label"
+				<div class="form-group"
 					[ngClass]="{'error': newEventForm.controls.time?.invalid && newEventForm.controls.time?.touched}">
-					<label class="f-required" for="eventTime">Event Time</label>
+					<span class="f-label"><label class="f-label f-required" for="eventTime">Event Time</label></span>
 					<em *ngIf="newEventForm.controls.time?.invalid && (newEventForm.controls.time?.touched)">Required</em>
 					<input (ngModel)="newEvent.time" name="time" required id="eventTime" type="text" class="form-control" placeholder="format(9:12 AM)" />
     </div>
@@ -60,7 +60,7 @@
 									</div>
 
     <div class="col-sm-12 form-button-group">
-									<button type="submit" [disabled]="newEventForm.invalid" class="btn btn-primary">Save</button>
+									<button type="submit" class="btn btn-primary">Save</button>
 									<button type="button" class="btn btn-default margin-btn-canel" (click)="cancel()">Cancel</button>
     </div>
 </form>

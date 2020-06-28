@@ -1,19 +1,19 @@
 <div class="row" *ngFor="let session of visibleSessions">
-  <div col class="col-md-1">
-    <div *ngIf="auth.isAuthenticated()">
+  <div *ngIf="auth.isAuthenticated()" col class="col-md-1">
+    <div>
       <upvote (vote)="toggleVote(session)" [count]="session.voters.length" [voted]="userHasVoted(session)"></upvote>
     </div>
   </div>
   <div class="col-md-10">
     <collapsible-well [title]="session.name">
-        <div well-title>
+        <div class="panel-title" well-title>
           {{session.name}}
           <i *ngIf="session.voters.length > 2" class="fa fa-fire" style="color:red"></i> "
         </div>  
         <div well-body>
           <h6>{{session.presenter}}</h6>
-          <span>Duration: {{session.duration}}</span><br />
-          <span>Level: {{session.level}}</span>
+          <span><strong>Duration:</strong> {{session.duration}}</span><br />
+          <span><strong>Level:</strong> {{session.level}}</span>
           <p>{{session.abstract}}</p>
         </div>
     </collapsible-well>
