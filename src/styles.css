@@ -4,6 +4,17 @@
   margin: 1rem;
 }
 
+.f-label ::before {
+    content: ":";
+    float: right;
+}
+
+.f-label .f-required::after {
+  content: "*";
+  color: red;
+  font-size: 14px;
+}
+
 .cursor-pointer{
   cursor: pointer;
 }

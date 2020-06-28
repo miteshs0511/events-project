@@ -1,23 +1,22 @@
 <div class="container">
-    <!-- <img [src]="event?.imageUrl" [alt]="event?.name" class="eventImage"> -->
   
     <div class="row">
       <div class="col-md-11">
-        <h2>{{event?.name | uppercase}} </h2>
+        <h3>{{event?.name | uppercase}} </h3>
       </div>
     </div>
   
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-sm-6">
         <div><strong>Date:</strong> {{event?.date | date}}</div>
         <div><strong>Time:</strong> {{event?.time}}</div>
         <div><strong>Price:</strong> {{event?.price | currency:'USD'}}</div>
       </div>
-      <div class="col-md-6">
-        <address>
-          <strong>Address:</strong><br />
-          {{event?.location?.address}}<br />
-          {{event?.location?.city}}, {{event?.location?.country}}
+      <div class="col-sm-6">
+        <address class="address-display">
+          <div><strong>Address:</strong></div>
+          <div>{{event?.location?.address}}
+          {{event?.location?.city}}, {{event?.location?.country}}</div>
         </address>
       </div>
     </div>

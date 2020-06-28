@@ -63,11 +63,10 @@ updateEvent(event) {
 const Events: IEvent[] = [
     {
       id: 1,
-      name: 'Angular Connect',
-      date: new Date('9/26/2036'),
+      name: 'Firebase Live',
+      date: new Date('6/23/2020'),
       time: '10:00 am',
       price: 599.99,
-      imageUrl: '/assets/images/angularconnect-shield.png',
       location: {
         address: '1057 DT',
         city: 'London',
@@ -76,96 +75,42 @@ const Events: IEvent[] = [
       sessions: [
         {
           id: 1,
-          name: 'Using Angular 4 Pipes',
-          presenter: 'Peter Bacon Darwin',
+          name: 'Unit testing security rules with the new Firebase emulator suite',
+          presenter: 'Todd Kerpelman',
           duration: 1,
           level: 'Intermediate',
-          abstract: `Learn all about the new pipes in Angular 4, both
-          how to write them, and how to get the new AI CLI to write
-          them for you. Given by the famous PBD, president of Angular
-          University (formerly Oxford University)`,
+          abstract: `Unit testing is like flossing; we all know we should be doing it, but not all of us actually are. There’s no better subject to unit test than security rules, the main line of defense between your database and all of those untrustworthy clients. In this video, we'll teach you how to efficiently unit test your security rules using some helpful libraries and the latest Firebase emulator suite.`,
           voters: ['bradgreen', 'igorminar', 'martinfowler']
         },
         {
           id: 2,
-          name: 'Getting the most out of your dev team',
-          presenter: 'Jeff Cross',
+          name: 'Codelab: Get to know Firebase for web',
+          presenter: 'Rachel Saunders',
           duration: 1,
           level: 'Intermediate',
-          abstract: `We all know that our dev teams work hard, but with
-          the right management they can be even more productive, without
-          overworking them. In this session I'll show you how to get the
-          best results from the talent you already have on staff.`,
+          abstract: `Build a web app from scratch with Firebase and the StackBlitz online editor. You'll use basic HTML and JavaScript to talk to Firebase. This is a great introduction to using the Firebase console and integrating Firebase into an app. No extensive prior knowledge or software installations are needed.`,
           voters: ['johnpapa', 'bradgreen', 'igorminar', 'martinfowler']
         },
         {
           id: 3,
-          name: 'Angular 4 Performance Metrics',
-          presenter: 'Rob Wormald',
+          name: 'The Local Firebase Emulator UI in 15 minutes',
+          presenter: 'David East & Tyler Crowe',
           duration: 2,
           level: 'Advanced',
-          abstract: `Angular 4 Performance is hot. In this session, we'll see
-          how Angular gets such great performance by preloading data on
-          your users devices before they even hit your site using the
-          new predictive algorithms and thought reading software
-          built into Angular 4.`,
-          voters: []
+          abstract: `The Firebase emulator suite fundamentally changes how you build on Firebase by making it possible to run services locally on your machine. Now, each developer can use a safe sandbox environment for feature development. In this video, you will learn how to set up these emulators so you can develop without network latency, create better unit and integration tests, run Firebase in continuous integration, and experiment without the fear of breaking everything.`,
+          voters: ['rachelmario']
         },
         {
           id: 4,
-          name: 'Angular 5 Look Ahead',
+          name: 'Codelab: Cloud Firestore Web',
           presenter: 'Brad Green',
           duration: 2,
           level: 'Advanced',
-          abstract: `Even though Angular 5 is still 6 years away, we all want
-          to know all about it so that we can spend endless hours in meetings
-          debating if we should use Angular 4 or not. This talk will look at
-          Angular 6 even though no code has yet been written for it. We'll
-          look at what it might do, and how to convince your manager to
-          hold off on any new apps until it's released`,
+          abstract: `How to efficiently and securely store and sync your app's data in the cloud with Cloud Firestore. `,
           voters: []
         },
         {
           id: 5,
-          name: 'Basics of Angular 4',
-          presenter: 'John Papa',
-          duration: 2,
-          level: 'Beginner',
-          abstract: `It's time to learn the basics of Angular 4. This talk
-          will give you everything you need to know about Angular 4 to
-          get started with it today and be building UI's for your self
-          driving cars and butler-bots in no time.`,
-          voters: ['bradgreen', 'igorminar']
-        }
-      ]
-    },
-    {
-      id: 2,
-      name: 'ng-nl',
-      date: new Date('4/15/2037'),
-      time: '9:00 am',
-      price: 950.00,
-      imageUrl: '/assets/images/ng-nl.png',
-      location: {
-        address: 'The NG-NL Convention Center & Scuba Shop',
-        city: 'Amsterdam',
-        country: 'Netherlands'
-      },
-      sessions: [
-        {
-          id: 1,
-          name: 'Testing Angular 4 Workshop',
-          presenter: 'Pascal Precht & Christoph Bergdorf',
-          duration: 4,
-          level: 'Beginner',
-          abstract: `In this 6 hour workshop you will learn not only how to test Angular 4,
-          you will also learn how to make the most of your team's efforts. Other topics
-          will be convincing your manager that testing is a good idea, and using the new
-          protractor tool for end to end testing.`,
-          voters: ['bradgreen', 'igorminar']
-        },
-        {
-          id: 2,
           name: 'Angular 4 and Firebase',
           presenter: 'David East',
           duration: 3,
@@ -174,9 +119,32 @@ const Events: IEvent[] = [
           ultra-real-time 5D Firebase back end, hosting platform, and wine recommendation engine.`,
           voters: ['bradgreen', 'igorminar', 'johnpapa']
         },
+      ]
+    },
+    {
+      id: 2,
+      name: 'FLUTTER DAY',
+      date: new Date('6/25/2020'),
+      time: '9:00 am',
+      price: 950.00,
+      location: {
+        address: 'The NG-NL Convention Center & Scuba Shop',
+        city: 'Amsterdam',
+        country: 'Netherlands'
+      },
+      sessions: [
         {
-          id: 3,
-          name: 'Reading the Angular 4 Source',
+          id: 1,
+          name: 'Building beautiful UIs with Flutter and CodePen',
+          presenter: 'Zoey Fan, Alex Vazquez & Mariano Zorrilla',
+          duration: 4,
+          level: 'Beginner',
+          abstract: `To discover how you can create beautiful UIs on CodePen’s new Flutter editor.`,
+          voters: ['bradgreen', 'igorminar']
+        },
+        {
+          id: 2,
+          name: 'Flutter DevTools',
           presenter: 'Patrick Stapleton',
           duration: 2,
           level: 'Intermediate',
@@ -187,25 +155,21 @@ const Events: IEvent[] = [
         },
         {
           id: 4,
-          name: 'Hail to the Lukas',
+          name: 'Bob Nystrom and Kevin Moore',
           presenter: 'Lukas Ruebbelke',
           duration: 1,
           level: 'Beginner',
-          abstract: `In this session, Lukas will present the
-          secret to being awesome, and how he became the President
-          of the United States through his amazing programming skills,
-          showing how you too can be success with just attitude.`,
+          abstract: `Hear from Bob and Kevin on the upcoming null-safety feature in Dart.`,
           voters: ['bradgreen']
         },
       ]
     },
     {
       id: 3,
-      name: 'ng-conf 2037',
-      date: new Date('5/4/2037'),
+      name: 'web.dev',
+      date: new Date('6/30/2020'),
       time: '9:00 am',
-      price: 759.00,
-      imageUrl: '/assets/images/ng-conf.png',
+      price: 559.00,
       location: {
         address: 'The Palatial America Hotel',
         city: 'Salt Lake City',
@@ -214,80 +178,57 @@ const Events: IEvent[] = [
       sessions: [
         {
           id: 1,
-          name: 'How Elm Powers Angular 4',
-          presenter: 'Murphy Randle',
+          name: "What's New in Speed Tooling",
+          presenter: 'Elizabeth Sweeny',
           duration: 2,
           level: 'Intermediate',
-          abstract: `We all know that Angular is written in Elm, but did you
-          know how the source code is really written? In this exciting look
-          into the internals of Angular 4, we'll see exactly how Elm powers
-          the framework, and what you can do to take advantage of this knowledge.`,
+          abstract: `Our understanding of how to effectively measure and optimize a users' experience is continually evolving, and we keep our metrics and tooling updated to reflect the latest in our learnings. This talk will cover where to measure your Core Web Vitals in the lab and in the field, as well as how to leverage the newest features and products to build and maintain exceptionally fast experiences for all of your users.`,
           voters: ['bradgreen', 'martinfowler', 'igorminar']
         },
         {
           id: 2,
-          name: 'Angular and React together',
-          presenter: 'Jamison Dance',
+          name: 'Optimize for Core Web Vitals',
+          presenter: 'Addy Osmani',
           duration: 2,
           level: 'Intermediate',
-          abstract: `React v449.6 has just been released. Let's see how to use
-          this new version with Angular to create even more impressive applications.`,
+          abstract: `In this hands-on talk, we'll cover tips & tricks for optimizing your user-experience to meet the Core Web Vitals. We'll use tools like Lighthouse & DevTools, show you code snippets for fixes and highlight how you too can get fast and stay fast.`,
           voters: ['bradgreen', 'martinfowler']
         },
         {
           id: 3,
-          name: 'Redux Woes',
-          presenter: 'Rob Wormald',
+          name: 'Mastering the Chrome UX Report on BigQuery',
+          presenter: 'Rick Viscomi',
           duration: 1,
           level: 'Intermediate',
-          abstract: `Everyone is using Redux for everything from Angular to React to
-          Excel macros, but you're still having trouble grasping it? We'll take a look
-          at how farmers use Redux when harvesting grain as a great introduction to
-          this game changing technology.`,
+          abstract: `There is so much information in the Chrome UX Report dataset on BigQuery, it could feel overwhelming at first. We've been hard at work making sure that the treasure trove of web transparency data is accessible to every developer. Learn how to query the Chrome UX Report using our new summary datasets and shortcut functions, so you can extract insights quickly and cheaply like a pro.`,
           voters: ['bradgreen', 'martinfowler', 'johnpapa']
         },
         {
           id: 4,
-          name: 'ng-wat again!!',
+          name: 'How to Analyze Your JavaScript Bundles',
           presenter: 'Shai Reznik',
           duration: 1,
           level: 'Beginner',
-          abstract: `Let's take a look at some of the stranger pieces of Angular 4,
-          including neural net nets, Android in Androids, and using pipes with actual pipes.`,
+          abstract: `Learn how to analyze your bundled JavaScript code and to spot common issues that can easily bloat up your application size.`,
           voters: ['bradgreen', 'martinfowler', 'igorminar', 'johnpapa']
         },
         {
           id: 5,
-          name: 'Dressed for Success',
-          presenter: 'Ward Bell',
+          name: 'Debugging JavaScript SEO issues',
+          presenter: 'Martin Splitt',
           duration: 2,
           level: 'Beginner',
-          abstract: `Being a developer in 2037 is about more than just writing bug-free code.
-          You also have to look the part. In this amazing expose, Ward will talk you through
-          how to pick out the right clothes to make your coworkers and boss not only
-          respect you, but also want to be your buddy.`,
+          abstract: `Diagnosing common JavaScript SEO issues and helpful steps to debug them!`,
           voters: ['bradgreen', 'martinfowler']
-        },
-        {
-          id: 6,
-          name: 'These aren\'t the directives you\'re looking for',
-          presenter: 'John Papa',
-          duration: 2,
-          level: 'Intermediate',
-          abstract: `Coinciding with the release of Star Wars Episode 18, this talk will show how
-          to use directives in your Angular 4 development while drawing lessons from the new movie,
-          featuring all your favorite characters like Han Solo's ghost and Darth Jar Jar.`,
-          voters: ['bradgreen', 'martinfowler']
-        },
+        }
       ]
     },
     {
       id: 4,
       name: 'UN Angular Summit',
-      date: new Date('6/10/2037'),
+      date: new Date('6/10/2021'),
       time: '8:00 am',
       price: 800.00,
-      imageUrl: '/assets/images/basic-shield.png',
       location: {
         address: 'The UN Angular Center',
         city: 'New York',
@@ -330,43 +271,4 @@ const Events: IEvent[] = [
         },
       ]
     },
-    {
-      id: 5,
-      name: 'ng-vegas',
-      date: new Date('2/10/2037'),
-      time: '9:00 am',
-      price: 400.00,
-      imageUrl: '/assets/images/ng-vegas.png',
-      location: {
-        address: 'The Excalibur',
-        city: 'Las Vegas',
-        country: 'USA'
-      },
-      sessions: [
-        {
-          id: 1,
-          name: 'Gambling with Angular',
-          presenter: 'John Papa',
-          duration: 1,
-          level: 'Intermediate',
-          abstract: `No, this talk isn't about slot machines. We all know that
-          Angular is used in most waiter-bots and coke vending machines, but
-          did you know that was also used to write the core engine in the majority
-          of voting machines? This talk will look at how all presidential elections
-          are now determined by Angular code.`,
-          voters: ['bradgreen', 'igorminar']
-        },
-        {
-          id: 2,
-          name: 'Angular 4 in 60ish Minutes',
-          presenter: 'Dan Wahlin',
-          duration: 2,
-          level: 'Beginner',
-          abstract: `Get the skinny on Angular 4 for anyone new to this great new technology.
-          Dan Wahlin will show you how you can get started with Angular in 60ish minutes,
-          guaranteed!`,
-          voters: ['bradgreen', 'igorminar', 'johnpapa']
-        }
-      ]
-    }
   ];

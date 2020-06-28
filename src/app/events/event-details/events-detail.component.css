@@ -10,3 +10,13 @@
 a{
     cursor: pointer;
 }
+
+.address-display{
+  display: flex;
+}
+
+@media (min-width: 768px){
+  .address-display{
+    display: block;
+  }  
+}
