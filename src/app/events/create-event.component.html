@@ -15,7 +15,7 @@
 				[ngClass]="{'error': newEventForm.controls.date?.invalid && newEventForm.controls.date?.touched}">
 				<span class="f-label"><label class="f-label f-required" for="eventDate">Event Date</label></span>
 				<em *ngIf="newEventForm.controls.date?.invalid && (newEventForm.controls.date?.touched)">Required</em>
-				<input [(ngModel)]="eventDateModel" name="date" required id="eventDate" type="text" class="form-control" placeholder="format (mm/dd/yyyy)..." />
+				<input [(ngModel)]="eventDateModel" name="date" required (click)="d.toggle()" id="eventDate" type="text" ngbDatepicker #d="ngbDatepicker" class="form-control" placeholder="format (mm/dd/yyyy)..." />
     </div>
 			</div>
 			<div class="col-sm-6">

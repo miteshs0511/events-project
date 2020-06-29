@@ -3,13 +3,15 @@ import { Router } from "@angular/router";
 import { EventService } from "./shared/events.service";
 import { TOASTR_TOKEN, Toastr } from '../common/toastr.service';
 import { JQ_TOKEN } from '../common/jQuery.service';
+import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   templateUrl: "./create-event.component.html",
   styleUrls: ["./create-event.component.css"]
 })
 export class CreateEventComponent implements OnInit {
-  eventDateModel;
+  eventDateModel: NgbDateStruct;
+
 
   @ViewChild('newEventForm') createEventForm: any;
 
@@ -20,8 +22,8 @@ export class CreateEventComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.dateTimePickerCall('eventDate', 'L');
-    this.dateTimePickerCall('eventTime', 'LT');
+    // this.dateTimePickerCall('eventDate', 'L');
+    // this.dateTimePickerCall('eventTime', 'LT');
   }
 
   cancel() {

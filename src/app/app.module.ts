@@ -27,6 +27,7 @@ import { ModalTriggerDirective } from './common/modal-trigger.component';
 import { UpvoteComponent } from './events/event-details/upvote.component';
 import { VoterService } from './events/event-details/voter.service';
 import { EventResolver } from './events/event.resolver.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const toastr: Toastr = window['toastr'];
 const jQuery = window['jQuery'];
@@ -52,6 +53,7 @@ const jQuery = window['jQuery'];
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    NgbModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule
   ],
