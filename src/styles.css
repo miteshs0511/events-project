@@ -1,5 +1,19 @@
 /* Add application styles & imports to this file! */
 
+.ngb-dp-navigation-select select{
+  background-color: white !important;
+}
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body{
+  color: #ebebeb;
+  background-color: #2b3e50;
+}
+
+hr {
+  border-top: 1px solid #596a7b;
+}
+
 .margin-btn-canel{
   margin: 1rem;
 }

@@ -1,10 +1,12 @@
-<div [routerLink]="['/events',event.id]" class="well howerwell thumbnail cursor-pointer">
-    <h2>{{event?.name | uppercase}} </h2>
+<div [routerLink]="['/events',event.id]" class="card thumbnail cursor-pointer">
+  <div class="card-body">
+    <h3>{{event?.name | uppercase}} </h3>
     <div>Date: {{event.date | date:'MM/dd/yyyy'}}</div>
     <div>Time: {{event.time}}</div>
     <div>Price: {{event.price | currency:'USD'}}</div>
     <div>
         <span>Location: {{event?.location?.address}} </span>
         <span *ngIf="event?.location">{{event?.location?.city}},{{event?.location?.country}}</span>
+    </div>
     </div>
 </div>

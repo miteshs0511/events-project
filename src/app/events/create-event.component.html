@@ -1,7 +1,8 @@
 <h1>New Event</h1>
 <hr>
+<div class="container-fluid">
 
-<form #newEventForm="ngForm" (ngSubmit)="saveEvent(newEventForm.value)" autocomplete="off" novalidate>
+<form class="ro" #newEventForm="ngForm" (ngSubmit)="saveEvent(newEventForm.value)" autocomplete="off" novalidate>
 	<div class="col-sm-6">
 		<div class="form-group f-label"
 			[ngClass]="{'error': newEventForm.controls.name?.invalid && newEventForm.controls.name?.touched}">
@@ -23,7 +24,7 @@
 					[ngClass]="{'error': newEventForm.controls.time?.invalid && newEventForm.controls.time?.touched}">
 					<span class="f-label"><label class="f-label f-required" for="eventTime">Event Time</label></span>
 					<em *ngIf="newEventForm.controls.time?.invalid && (newEventForm.controls.time?.touched)">Required</em>
-					<input (ngModel)="newEvent.time" name="time" required id="eventTime" type="text" class="form-control" placeholder="format(9:12 AM)" />
+					<input (ngModel)="newEvent.time" name="time" required id="eventTime" type="text" class="form-control" placeholder="format  (9:12 AM)..." />
     </div>
 				</div>
 				<div class="col-sm-6">
@@ -64,3 +65,4 @@
 									<button type="button" class="btn btn-default margin-btn-canel" (click)="cancel()">Cancel</button>
     </div>
 </form>
+</div>
