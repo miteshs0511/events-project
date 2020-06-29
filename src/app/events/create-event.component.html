@@ -2,7 +2,7 @@
 <hr>
 <div class="container-fluid">
 
-<form class="ro" #newEventForm="ngForm" (ngSubmit)="saveEvent(newEventForm.value)" autocomplete="off" novalidate>
+<form class="row" #newEventForm="ngForm" (ngSubmit)="saveEvent(newEventForm.value)" autocomplete="off" novalidate>
 	<div class="col-sm-6">
 		<div class="form-group f-label"
 			[ngClass]="{'error': newEventForm.controls.name?.invalid && newEventForm.controls.name?.touched}">
@@ -61,7 +61,7 @@
 									</div>
 
     <div class="col-sm-12 form-button-group">
-									<button type="submit" class="btn btn-primary">Save</button>
+									<button type="submit" [disabled]="newEventForm.invalid" class="btn btn-primary">Save</button>
 									<button type="button" class="btn btn-default margin-btn-canel" (click)="cancel()">Cancel</button>
     </div>
 </form>
