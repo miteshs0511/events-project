@@ -44,7 +44,7 @@ hr {
 .f-label ::before {
     content: ":";
     float: right;
-    line-height: 1.8;
+    line-height: 1.5;
 }
 
 .f-label .f-required::after {
