@@ -3,9 +3,11 @@
     padding-right: 20px;
 }
 
-/* .eventImage{
-    height: 100px;
-} */
+.filter-label{
+  margin-right: 10px;
+  line-height: 2;
+  margin-bottom: 0px;
+}
 
 a{
     cursor: pointer;

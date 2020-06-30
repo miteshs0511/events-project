@@ -4,8 +4,9 @@
   
   .votingWidget {
     height: 64px;
-    padding-top: 7px;
+    padding: 5px 19px 19px 19px;
     border-radius: 21px;
+    background-color: #4e5d6c;
   }
   
   .votingButton {
