@@ -4,9 +4,9 @@
 
 <form class="row" #newEventForm="ngForm" (ngSubmit)="saveEvent(newEventForm.value)" autocomplete="off" novalidate>
 	<div class="col-sm-6">
-		<div class="form-group f-label"
+		<div class="form-group"
 			[ngClass]="{'error': newEventForm.controls.name?.invalid && newEventForm.controls.name?.touched}">
-			<label class="f-required" for="eventName">Event Name</label>
+			<span class="f-label"><label class="f-required" for="eventName">Event Name</label></span>
 			<em *ngIf="newEventForm.controls.name?.invalid && (newEventForm.controls.name?.touched)">Required</em>
 			<input (ngModel)="newEvent.name" name="name" required id="name" type="text" class="form-control" placeholder="Name of your event..." />
     </div>
@@ -28,17 +28,17 @@
     </div>
 				</div>
 				<div class="col-sm-6">
-					<div class="form-group f-label"
+					<div class="form-group"
 						[ngClass]="{'error': newEventForm.controls.price?.invalid && newEventForm.controls.price?.touched}">
-						<label class="f-required" for="eventPrice">Event Price</label>
+						<span class="f-label"><label class="f-required" for="eventPrice">Event Price</label></span>
 						<em *ngIf="newEventForm.controls.price?.invalid && (newEventForm.controls.price?.touched)">Required</em>
 						<input (ngModel)="newEvent.price" name="price" required id="eventPrice" type="text" type="number" class="form-control" placeholder="event price..." />
     </div>
 					</div>
 					<div class="col-sm-6">
 						<div ngModelGroup="location">
-							<div class="form-group f-label">
-								<label class="f-required" for="address">Event Location</label>
+							<div class="form-group">
+								<span class="f-label"><label class="f-required" for="address">Event Location</label></span>
 								<input (ngModel)="newEvent.address" name="address" id="address" type="text" class="form-control"
           placeholder="Address of event..." />
       </div>
@@ -54,15 +54,15 @@
 									</div>
 								</div>
 								<div class="col-sm-6">
-									<div class="form-group f-label">
-										<label for="onlineUrl">Online Url</label>
+									<div class="form-group">
+										<span class="f-label"><label for="onlineUrl">Online Url</label></span>
 										<input (ngModel)="newEvent.onlineUrl" name="onlineUrl" id="onlineUrl" type="text" class="form-control" placeholder="Online Url..." />
     </div>
 									</div>
 
     <div class="col-sm-12 form-button-group">
-									<button type="submit" [disabled]="newEventForm.invalid" class="btn btn-primary">Save</button>
-									<button type="button" class="btn btn-default margin-btn-canel" (click)="cancel()">Cancel</button>
+									<button type="submit" [disabled]="newEventForm.invalid" class="btn btn-primary btn-primary-color">Save</button>
+									<button type="button" class="btn btn-default btn-default-color margin-btn-canel" (click)="cancel()">Cancel</button>
     </div>
 </form>
 </div>

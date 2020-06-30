@@ -3,22 +3,23 @@
     <hr>
     <div class="col-md-4">
       <form [formGroup]="profileForm" (ngSubmit)="saveProfile(profileForm.value)" autocomplete="off" novalidate>
-        <div class="form-group f-label" [ngClass]="{'error': !validateFirstName()}">
-          <label class="f-required" for="firstName">First Name:</label>
+        
+        <div class="form-group" [ngClass]="{'error': !validateFirstName()}">
+          <span class="f-label"><label class="f-required" for="firstName">First Name:</label></span>
           <em *ngIf="!validateFirstName() && profileForm.controls.firstName.errors.required">Required</em>  
           <em *ngIf="!validateFirstName() && profileForm.controls.firstName.errors.pattern">Must start with a letter</em>  
           <input formControlName="firstName" id="firstName" type="text" class="form-control" placeholder="First Name..." />
-          
         </div>
-        <div class="form-group f-label" [ngClass]="{'error': !validateLastName() }">
-          <label class="f-required" for="lastName">Last Name:</label>
+
+        <div class="form-group" [ngClass]="{'error': !validateLastName() }">
+          <span class="f-label"><label class="f-required" for="lastName">Last Name:</label></span>
           <em *ngIf="!validateLastName()">Required</em>  
-          <input formControlName="lastName" id="lastName" type="text" class="form-control" placeholder="Last Name..." />
-          
+          <input formControlName="lastName" id="lastName" type="text" class="form-control" placeholder="Last Name..." />  
         </div>
   
-        <button type="submit" class="btn btn-primary">Save</button>
-        <button type="button" (click)="cancel()" class="btn btn-default margin-btn-canel">Cancel</button>
+        <button type="submit" class="btn btn-primary btn-primary-color">Save</button>
+        <button type="button" (click)="cancel()" class="btn btn-default btn-default-color margin-btn-canel">Cancel</button>
+
       </form>
     </div>
   </div>
