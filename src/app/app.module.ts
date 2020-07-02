@@ -4,6 +4,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './route';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { AppComponent } from './app.component';
 import { EventsListComponent } from './events/events-list.component';
 import { EventsThumbnailComponent } from './events/events-thumbnail.component';
@@ -11,8 +16,6 @@ import { NavBarComponent } from './nav/nav.component';
 import { EventService } from './events/shared/events.service';
 import { TOASTR_TOKEN, Toastr } from './common/toastr.service';
 import { EventsDetailComponent } from './events/event-details/events-detail.component';
-import { RouterModule } from '@angular/router';
-import { appRoutes } from './route';
 import { CreateEventComponent } from './events/create-event.component';
 import { Error404Component } from './common/errors/404error.component';
 import { EventRouteActivator } from './events/event-details/event-route-activator.service';
@@ -21,16 +24,12 @@ import { AuthService } from './user/auth.service';
 import { CreateSessionComponent } from './events/event-details/create-session.component';
 import { SessionListComponent } from './events/event-details/session-list.component';
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
-import { SimpleModalComponent } from './common/simple-modal.component';
-import { JQ_TOKEN } from './common/jQuery.service';
-import { ModalTriggerDirective } from './common/modal-trigger.component';
 import { UpvoteComponent } from './events/event-details/upvote.component';
 import { VoterService } from './events/event-details/voter.service';
 import { EventResolver } from './events/event.resolver.service';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 const toastr: Toastr = window['toastr'];
-const jQuery = window['jQuery'];
 
 @NgModule({
   declarations: [
@@ -44,8 +43,6 @@ const jQuery = window['jQuery'];
     CreateSessionComponent,
     SessionListComponent,
     CollapsibleWellComponent,
-    SimpleModalComponent,
-    ModalTriggerDirective,
     UpvoteComponent
   ],
   imports: [
@@ -60,7 +57,6 @@ const jQuery = window['jQuery'];
   providers: [
     EventService,
     { provide: TOASTR_TOKEN, useValue: toastr},
-    { provide: JQ_TOKEN, useValue: jQuery },
     EventRouteActivator,
     EventListResolver,
     EventResolver,

@@ -1,7 +1,9 @@
-.nav.navbar-nav{
-    font-size: 15px;
-}
 
 li > a.active {
     color: #F97924;
+}
+
+.session-dropdown{
+  min-height: 200px;
+  overflow-y: auto; 
 }

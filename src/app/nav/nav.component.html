@@ -7,12 +7,17 @@
           </li>
           <li class="nav-item"><a class="nav-link" [routerLink]="['/events/new']" routerLinkActive="active">Create Event</a></li>
         </ul>
+         <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+            <input [(ngModel)]="searchTerm" name="searchTerm" type="text" class="form-control" id="dropdownManual" ngbDropdownAnchor placeholder="Search Sessions" >
+             <div ngbDropdownMenu class="session-dropdown" aria-labelledby="dropdownManual">
+               <span *ngIf="foundSessions?.length > 0;else elseBlock">
+                <button *ngFor="let session of foundSessions" [routerLink]="['/events',session.eventId]" ngbDropdownItem>{{session.name}}</button></span>
+               <ng-template #elseBlock><button ngbDropdownItem>No matching session found</button></ng-template>
+            </div>
+            </div>
+            <button class="btn btn-default btn-default-color" (click)="$event.stopPropagation(); myDrop.open();searchSessions(searchTerm)">Go</button>
          
-        <form id="searchForm" class="form-inline" (ngSubmit)="searchSessions(searchTerm)">
-            <input [(ngModel)]="searchTerm" name="searchTerm" type="text" class="form-control" placeholder="Search Sessions" >
-            <button class="btn btn-default btn-default-color"  modal-trigger="searchResults">Go</button>
-         
-        </form>
+        <!-- </form> -->
          <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" *ngIf="!isAuthenticated()" [routerLink]="['user/login']"> Login </a>
@@ -20,9 +25,3 @@
             </li>
           </ul>
   </div>
-
-  <simple-modal closeOnBodyClick="true" elementId="searchResults" title="Matching Sessions">
-    <div class="list-group">
-      <a class="list-group-item" *ngFor="let session of foundSessions" [routerLink]="['/events',session.eventId]">{{session.name}}</a>
-    </div>
-  </simple-modal>
