@@ -1,27 +1,35 @@
 <div class="navbar navbar-expand-sm bg-dark navbar-dark">
+
         <a class="navbar-brand" >Events</a>
       
-        <ul class="navbar-nav">
+        <ul col-sm-6 class="navbar-nav navigation-links">
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/events']" routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}">All Events</a>
           </li>
           <li class="nav-item"><a class="nav-link" [routerLink]="['/events/new']" routerLinkActive="active">Create Event</a></li>
         </ul>
+      
+       
          <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
-            <input [(ngModel)]="searchTerm" name="searchTerm" type="text" class="form-control" id="dropdownManual" ngbDropdownAnchor placeholder="Search Sessions" >
+            <input [(ngModel)]="searchTerm" name="searchTerm" type="text" class="form-control" id="dropdownManual" ngbDropdownAnchor placeholder="Search Sessions" (keyup.enter)="$event.stopPropagation(); myDrop.open();searchSessions(searchTerm)" >
              <div ngbDropdownMenu class="session-dropdown" aria-labelledby="dropdownManual">
                <span *ngIf="foundSessions?.length > 0;else elseBlock">
                 <button *ngFor="let session of foundSessions" [routerLink]="['/events',session.eventId]" ngbDropdownItem>{{session.name}}</button></span>
                <ng-template #elseBlock><button ngbDropdownItem>No matching session found</button></ng-template>
             </div>
             </div>
-            <button class="btn btn-default btn-default-color" (click)="$event.stopPropagation(); myDrop.open();searchSessions(searchTerm)">Go</button>
+            <button class="btn btn-default btn-default-color mr-sm-2 fa fa-search" (click)="$event.stopPropagation(); myDrop.open();searchSessions(searchTerm)"></button>
          
         <!-- </form> -->
-         <ul class="navbar-nav">
+         <ul class="navbar-nav text-nowrap">
             <li class="nav-item">
               <a class="nav-link" *ngIf="!isAuthenticated()" [routerLink]="['user/login']"> Login </a>
               <a class="nav-link" *ngIf="isAuthenticated()" [routerLink]="['user/profile']">Welcome {{firstName}}</a>
             </li>
+             <li class="nav-item text-nowrap">
+              <a *ngIf="!isAuthenticated()" class="nav-link" [routerLink]="['user/signup']"> Sign Up </a>
+               <a class="nav-link" *ngIf="isAuthenticated()">Logout</a>
+            </li>
           </ul>
+       
   </div>

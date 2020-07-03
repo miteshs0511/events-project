@@ -1,9 +1,13 @@
 
 li > a.active {
-    color: #F97924;
+    color: #F97924 !important;
+}
+
+.navigation-links{
+  width:60%; 
 }
 
 .session-dropdown{
-  min-height: 200px;
+  max-height: 200px;
   overflow-y: auto; 
 }
