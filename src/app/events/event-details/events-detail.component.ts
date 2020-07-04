@@ -21,10 +21,12 @@ export class EventsDetailComponent implements OnInit {
     }
 
     ngOnInit() {
-       this.route.data.forEach((data) => {
-          this.event = data['event'];
-            this.addMode = false;
-        });
+      //  this.route.data.forEach((data) => {
+      //     this.event = data['event'];
+      //       this.addMode = false;
+      //   });
+       this.event = this.eventService.getEvent(+this.route.snapshot.params['id']);
+       this.addMode = false;
     }
 
     addSession() {

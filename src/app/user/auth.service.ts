@@ -27,7 +27,7 @@ export class AuthService {
             userFound = true;
           }
         })
-        return userFo;
+        return !userFound;
     }
 
     signupUser(formValues){
