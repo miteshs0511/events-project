@@ -9,8 +9,10 @@
   margin-bottom: 0px;
 }
 
-a{
-    cursor: pointer;
+.plus-size{
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: 2px;
 }
 
 .address-display{

@@ -24,15 +24,12 @@
     <hr>
 
     <div class="row" style="margin-bottom:  10px;">
-      <div class="col-md-6">
-        <h3 style="margin: 0">Sessions</h3>
+      <div class="col-md-12 d-flex">
+        <h3 style="margin: 0 10px 0 0">Sessions</h3>
+        <i class="fa fa-plus-circle plus-size" (click)="addSession()"></i>
       </div>
-      
-      <div class="col-md-6 add-session-link">
-        <a (click)="addSession()">Add Session</a>
-      </div>
-    
     </div>
+
     <div *ngIf="!addMode" class="row" style="margin-bottom:  10px;">
       <div class="col-md-6">
         <div class="btn-group btn-group-sm">
@@ -43,7 +40,7 @@
       </div>
       <div class="col-md-6"> 
         <div class="btn-group btn-group-sm">
-        <label class="filter-label">Filter By:</label>
+        <label class="filter-label">Filter:</label>
         <button class="btn btn-default btn-default-color" [class.active]="filterBy ==='all'" (click)="filterBy ='all'">
           All
         </button>

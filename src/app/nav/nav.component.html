@@ -14,7 +14,7 @@
             <input [(ngModel)]="searchTerm" name="searchTerm" type="text" class="form-control" id="dropdownManual" ngbDropdownAnchor placeholder="Search Sessions" (keyup.enter)="$event.stopPropagation(); myDrop.open();searchSessions(searchTerm)" >
              <div ngbDropdownMenu class="session-dropdown" aria-labelledby="dropdownManual">
                <span *ngIf="foundSessions?.length > 0;else elseBlock">
-                <button *ngFor="let session of foundSessions" [routerLink]="['/events',session.eventId]" ngbDropdownItem>{{session.name}}</button></span>
+                <button *ngFor="let session of foundSessions" class="dropdown-list" [routerLink]="['/events',session.eventId]" ngbDropdownItem>{{session.name}}</button></span>
                <ng-template #elseBlock><button ngbDropdownItem>No matching session found</button></ng-template>
             </div>
             </div>
