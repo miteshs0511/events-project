@@ -28,7 +28,6 @@ import { SessionListComponent } from './events/event-details/session-list.compon
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
 import { UpvoteComponent } from './events/event-details/upvote.component';
 import { VoterService } from './events/event-details/voter.service';
-import { EventResolver } from './events/event.resolver.service';
 
 
 const toastr: Toastr = window['toastr'];
@@ -61,7 +60,6 @@ const toastr: Toastr = window['toastr'];
     { provide: TOASTR_TOKEN, useValue: toastr},
     EventRouteActivator,
     EventListResolver,
-    EventResolver,
     VoterService,
     AuthService,
      {provide: NgbDateAdapter, useClass: CustomAdapter},

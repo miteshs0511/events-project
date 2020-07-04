@@ -24,6 +24,16 @@ li > a.nav-link{
   .menu-visibility {
     display: none;
   }
+}
+
+@media (max-width: 576px) {
+  .search-div{
+    width:60%;
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 576px) and (max-width:768px) {
   .search-div{
     width:100%;
     display: inline-flex;
