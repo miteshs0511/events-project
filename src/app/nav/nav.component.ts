@@ -30,6 +30,10 @@ export class NavBarComponent {
    }
  }
 
+ logout(){
+   this.authService.logOut();
+ }
+
  searchSessions(searchTerm) {
   this.eventService.searchSessions(searchTerm).subscribe(sessions => {
     this.foundSessions = sessions;

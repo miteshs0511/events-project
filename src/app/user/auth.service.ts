@@ -20,13 +20,14 @@ export class AuthService {
     }
 
     loginUser(userName: string, password: string):boolean {
+        let userFound = false;
         this.userList.forEach(element =>{
           if(element.userName === userName && element.password === password){
             this.currentUser = element;
-            return true;
+            userFound = true;
           }
         })
-        return false;
+        return userFo;
     }
 
     signupUser(formValues){
@@ -41,6 +42,10 @@ export class AuthService {
 
     getCurrentUser(){
       return this.currentUser;
+    }
+
+    logOut(){
+      this.currentUser = undefined;
     }
 
     isAuthenticated() {

@@ -50,4 +50,5 @@ export class ProfileComponent implements OnInit {
   validateLastName() {
     return this.profileForm.controls.lastName.valid || this.profileForm.controls.lastName.untouched;
   }
+
 }
