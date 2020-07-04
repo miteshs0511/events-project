@@ -45,7 +45,7 @@ export class CreateSessionComponent implements OnInit {
             id: undefined,
             name: formValues.name,
             presenter: formValues.presenter,
-            duration: +formValues.duration,
+            duration: formValues.duration,
             level: formValues.level,
             abstract: formValues.abstract,
             voters: []

@@ -11,6 +11,3 @@
     font-family: "FontAwesome"
 }
 
-.panel-title[aria-expanded="true"]::after {
-	content: "\f106";
-}

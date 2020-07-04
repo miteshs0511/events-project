@@ -9,16 +9,34 @@ import { IUser } from './user.model';
 export class AuthService {
     currentUser;
 
+    userList = [ {
+      password: 'admin',
+      userName: 'admin',
+      firstName: 'Mitesh',
+      lastName: 'Sanchaniya'
+    }]
+
     constructor(){
     }
 
-    loginUser(userName: string, password: string) {
-        this.currentUser = {
-            id: 1,
-            userName: userName,
-            firstName: 'John',
-            lastName: 'Papa'
+    loginUser(userName: string, password: string):boolean {
+        this.userList.forEach(element =>{
+          if(element.userName === userName && element.password === password){
+            this.currentUser = element;
+            return true;
+          }
+        })
+        return false;
+    }
+
+    signupUser(formValues){
+      this.currentUser = {
+            userName: formValues.userName,
+            password:formValues.password,
+            firstName: formValues.firstName,
+            lastName: formValues.lastName
         };
+      this.userList.push(formValues);  
     }
 
     getCurrentUser(){

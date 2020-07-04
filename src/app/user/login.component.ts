@@ -18,8 +18,13 @@ export class LoginComponent {
 
 
     login(formValues) {
-        this.authService.loginUser(formValues.userName, formValues.password);
-        this.route.navigate(['events']);
+        let errorOccur = this.authService.loginUser(formValues.userName, formValues.password);
+        if(errorOccur){
+
+        }else{
+          this.route.navigate(['events']);
+        }
+        
     }
 
     cancel() {

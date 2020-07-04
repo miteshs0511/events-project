@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './route';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgbDateAdapter, NgbDateParserFormatter} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { EventsListComponent } from './events/events-list.component';
@@ -17,6 +18,7 @@ import { EventService } from './events/shared/events.service';
 import { TOASTR_TOKEN, Toastr } from './common/toastr.service';
 import { EventsDetailComponent } from './events/event-details/events-detail.component';
 import { CreateEventComponent } from './events/create-event.component';
+import { CustomAdapter,CustomDateParserFormatter} from './events/datepicker.adapter';
 import { Error404Component } from './common/errors/404error.component';
 import { EventRouteActivator } from './events/event-details/event-route-activator.service';
 import { EventListResolver } from './events/events-list-resolver.service';
@@ -62,6 +64,8 @@ const toastr: Toastr = window['toastr'];
     EventResolver,
     VoterService,
     AuthService,
+     {provide: NgbDateAdapter, useClass: CustomAdapter},
+    {provide: NgbDateParserFormatter, useClass: CustomDateParserFormatter},
     {
       provide: 'canDeactivateCreateEvent', useValue: checkDirtyState
     }

@@ -50,7 +50,7 @@ searchSessions(searchTerm: string) {
 
 saveEvent(event) {
   event.id = 999;
-  event.session = [];
+  event.sessions = [];
   Events.push(event);
 }
 

@@ -48,7 +48,7 @@
               <a class="nav-link" *ngIf="isAuthenticated()" routerLinkActive="active" (click)="closeNav()" [routerLink]="['user/profile']">Profile</a>
             </li>
              <li class="nav-item text-nowrap">
-              <a *ngIf="!isAuthenticated()" class="nav-link" routerLinkActive="active"  [routerLink]="['user/signup']"> Sign Up </a>
+              <a *ngIf="!isAuthenticated()" class="nav-link" routerLinkActive="active" (click)="closeNav()" [routerLink]="['user/signup']"> Sign Up </a>
                <a class="nav-link" *ngIf="isAuthenticated()">Logout</a>
             </li>
         </ul>
